@@ -1,9 +1,14 @@
+// ignore_for_file: use_build_context_synchronously, unused_import
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mcqs_entry/common/utills/app_colors.dart';
+import 'package:mcqs_entry/common/utills/session_box.dart';
+import 'package:mcqs_entry/main.dart';
 import 'package:mcqs_entry/pages/data_entry/provider.dart';
 import 'package:mcqs_entry/pages/data_entry/widgets/custom_drop_down.dart';
+import 'package:mcqs_entry/pages/login/login_page.dart';
 import 'package:provider/provider.dart';
 
 class DataEntryPage extends StatefulWidget {
@@ -19,6 +24,12 @@ class _DataEntryPageState extends State<DataEntryPage> {
   var option2 = TextEditingController();
   var option3 = TextEditingController();
   var option4 = TextEditingController();
+  Future<void> _logout() async {
+    await SessionBox.deleteToken();
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+      return const LoginPage();
+    }));
+  }
 
   @override
   void initState() {
@@ -33,6 +44,12 @@ class _DataEntryPageState extends State<DataEntryPage> {
       appBar: AppBar(
         backgroundColor: AppColors.brandingColor,
         title: const Text('Data Entry'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: _logout,
+          ),
+        ],
         centerTitle: true,
       ),
       body: Consumer<DataEntryProvider>(
