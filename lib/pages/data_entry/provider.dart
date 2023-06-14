@@ -626,12 +626,12 @@ class DataEntryProvider extends ChangeNotifier {
                   currentCategory: "Aptitude"),
               AvailableTopics(
                   key: analyticalReasoningTopicsListKey,
-                  list: verbalReasoningTopicList,
+                  list: analyticalReasoningTopicList,
                   currentTopic: "Analytical Reasoning",
                   currentCategory: "Aptitude"),
               AvailableTopics(
                   key: quantitativeReasoningListKey,
-                  list: verbalReasoningTopicList,
+                  list: quantitativeReasoningTopicList,
                   currentTopic: "Quantitative Reasoning",
                   currentCategory: "Aptitude"),
 

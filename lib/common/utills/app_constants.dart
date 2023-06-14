@@ -1103,20 +1103,63 @@ List<String> verbalReasoningTopicList =
         ? (Hive.box(appBox).get(verbalReasoningTopicsListKey) as List<dynamic>)
             .map((e) => e.toString())
             .toList()
-        : [];
+        : [
+            "Similar  in Meaning",
+            "Closest in Meaning",
+            "Most Opposite in Meaning",
+            "Related Words/Phrases",
+            "Sentence Completion",
+            "Logical Sequence of Words",
+            "Blood Relation Test",
+            "Syllogism",
+            "Series Completion",
+            "Cause and Effect",
+            "Cube & Cuboid",
+            "Analogy",
+            "Seating arrangement",
+            "Direction Sense Test",
+            "Classification",
+            "Data Sufficiency",
+            "Arithmetic Reasoning",
+            "Verification of Truth"
+          ];
 List<String> analyticalReasoningTopicList =
     Hive.box(appBox).get(analyticalReasoningTopicsListKey) != null
         ? (Hive.box(appBox).get(analyticalReasoningTopicsListKey)
                 as List<dynamic>)
             .map((e) => e.toString())
             .toList()
-        : [];
+        : ["Scenario Based", "Statements Based"];
 List<String> quantitativeReasoningTopicList =
     Hive.box(appBox).get(quantitativeReasoningListKey) != null
         ? (Hive.box(appBox).get(quantitativeReasoningListKey) as List<dynamic>)
             .map((e) => e.toString())
             .toList()
-        : [];
+        : [
+            "Problems on Trains",
+            "Time and Distance",
+            "Height and Distance",
+            "Time and Work",
+            "Simple Interest",
+            "Compound Interest",
+            "Profit and Loss",
+            "Partnership",
+            "Percentage",
+            "Problems on Ages",
+            "Calendar",
+            "Clock",
+            "Chain Rule",
+            "Pipes and Cistern",
+            "Boats and Streams",
+            "Alligation or Mixture",
+            "Logarithm",
+            "Races and Games",
+            "Stocks and Shares",
+            "True Discount",
+            "Probability",
+            "Banker's Discount",
+            "Odd Man Out and Series"
+          ];
 
 /// Aptitude Subject End Here
 
