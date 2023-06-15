@@ -85,6 +85,11 @@ class _DataEntryPageState extends State<DataEntryPage> {
                               option3.text.isEmpty ||
                               option4.text.isEmpty) {
                             buildErrorDialog();
+                          } else if (!dataEntryProvider.option1 &&
+                              !dataEntryProvider.option2 &&
+                              !dataEntryProvider.option3 &&
+                              !dataEntryProvider.option4) {
+                            chooseCorrectOptionErrorDialog();
                           } else {
                             dataEntryProvider.setIsUploading(true);
                             await dataEntryProvider.uploadDataToCPanel(
@@ -109,6 +114,12 @@ class _DataEntryPageState extends State<DataEntryPage> {
                                 optionThree: option3.text,
                                 optionFour: option4.text,
                                 onComplete: () {
+                                  question.clear();
+                                  option1.clear();
+                                  option2.clear();
+                                  option3.clear();
+                                  option4.clear();
+                                  dataEntryProvider.setOption(false, -1);
                                   showSnackBar(
                                       msg:
                                           "Your question is successfully saved. In Firebase",
@@ -335,6 +346,26 @@ class _DataEntryPageState extends State<DataEntryPage> {
                 width: 50.w,
               ),
               const Text('All Fields should be Fill'),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> chooseCorrectOptionErrorDialog() async {
+    await showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          content: Row(
+            children: [
+              Image.asset(
+                'assets/images/alert.png',
+                height: 50.h,
+                width: 50.w,
+              ),
+              const Text('Please Choose Correct Option'),
             ],
           ),
         );

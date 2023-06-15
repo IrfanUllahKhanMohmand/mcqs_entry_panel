@@ -160,6 +160,7 @@ List<String> managementSubjectList =
             "Economics",
             "Auditing",
             "Finance",
+            "HRM",
             "Marketing",
           ];
 
@@ -391,11 +392,12 @@ List<String> islamicStudyTopicsList =
             "Jihad in Islam ",
             "Most Repeated Past Papers",
             "World Islamic Empires",
+            "OIC and Islamic Countries",
             "Quran and Surah",
-            " Hajj & Zakat",
+            "Hajj & Zakat",
             "Khulafa Rashideen",
             "Ghazwat, Battle in Islam",
-            "Miscellaneous MCQs",
+            "Miscellaneous MCQs"
           ];
 List<String> computerTopicsList =
     Hive.box(appBox).get(computerTopicsListKey) != null
@@ -440,7 +442,7 @@ List<String> everydayScienceTopicsList =
             "Alloy",
             "International System of Units (SI)",
             "Major Elements and Metals",
-            "Most Repeated MCQs of EDS PDF",
+            "Most Repeated MCQs of EDS",
             "Energy Resources MCQs",
           ];
 List<String> urduTopicsList = Hive.box(appBox).get(urduTopicsListKey) != null
@@ -940,7 +942,6 @@ List<String> mechanicalEngineeringTopicList =
             "Manufacturing Engineering",
             "Mechanics and Design",
             "Materials Engineering",
-            "Materials Engineering",
             "Engineering Management",
             "Computational Mechanics",
             "Nuclear Engineering",
@@ -1059,7 +1060,6 @@ List<String> biologyGSTopicList =
             "Genetics and Blood",
             "Plant Anatomy & Physiology",
             "Kingdom & taxonomy of Plant",
-            "Plant Physiology",
             "Animal Kingdom, Taxonomy, Morphology",
             "Diseases",
             "Human Welfare and Economics Biology",

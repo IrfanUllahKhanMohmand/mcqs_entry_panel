@@ -13,7 +13,7 @@ class DataEntryProvider extends ChangeNotifier {
   String _topic = "";
   String get topic => _topic;
 
-  bool _option1 = true;
+  bool _option1 = false;
   bool _option2 = false;
   bool _option3 = false;
   bool _option4 = false;
@@ -22,6 +22,7 @@ class DataEntryProvider extends ChangeNotifier {
   bool get option2 => _option2;
   bool get option3 => _option3;
   bool get option4 => _option4;
+
   int correctOption = 1;
   bool isUploading = false;
 
@@ -52,6 +53,11 @@ class DataEntryProvider extends ChangeNotifier {
       _option2 = false;
       _option3 = false;
       _option4 = value;
+    } else if (optionNumber == -1) {
+      _option1 = false;
+      _option2 = false;
+      _option3 = false;
+      _option4 = false;
     }
     notifyListeners();
   }
@@ -552,6 +558,11 @@ class DataEntryProvider extends ChangeNotifier {
                   key: financeTopicsListKey,
                   list: financeTopicList,
                   currentTopic: "Finance",
+                  currentCategory: "Management Subjects"),
+              AvailableTopics(
+                  key: hRMTopicsListKey,
+                  list: hRMTopicList,
+                  currentTopic: "HRM",
                   currentCategory: "Management Subjects"),
               AvailableTopics(
                   key: marketingTopicsListKey,

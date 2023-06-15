@@ -14,13 +14,22 @@ class Global {
     }
     await Hive.openBox(appBox);
     await Firebase.initializeApp(
-        options: const FirebaseOptions(
-            apiKey: "AIzaSyDO3edKovL1X-ozT1kUlzLCkOhaA60TBBU",
-            authDomain: "quizappdb-d6c67.firebaseapp.com",
-            databaseURL: "https://quizappdb-d6c67-default-rtdb.firebaseio.com",
-            projectId: "quizappdb-d6c67",
-            storageBucket: "quizappdb-d6c67.appspot.com",
-            messagingSenderId: "788913363184",
-            appId: "1:788913363184:web:ecd0743ffa1849867a0a35"));
+      // options: const FirebaseOptions(
+      //     apiKey: "AIzaSyDO3edKovL1X-ozT1kUlzLCkOhaA60TBBU",
+      //     authDomain: "quizappdb-d6c67.firebaseapp.com",
+      //     databaseURL: "https://quizappdb-d6c67-default-rtdb.firebaseio.com",
+      //     projectId: "quizappdb-d6c67",
+      //     storageBucket: "quizappdb-d6c67.appspot.com",
+      //     messagingSenderId: "788913363184",
+      //     appId: "1:788913363184:web:ecd0743ffa1849867a0a35"),
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyDmGOfyQQ-eIXwStk-eSfGOwplh_Z1yyIg",
+          authDomain: "pk-mcqs.firebaseapp.com",
+          // databaseURL: "https://quizappdb-d6c67-default-rtdb.firebaseio.com",
+          projectId: "pk-mcqs",
+          storageBucket: "pk-mcqs.appspot.com",
+          messagingSenderId: "26935049758",
+          appId: "1:26935049758:web:c9e1215ad4745fff33780f"),
+    );
   }
 }
